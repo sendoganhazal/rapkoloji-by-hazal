@@ -1,13 +1,4 @@
 .main{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 75vh) 450px auto;
-   grid-template-areas:
-  "hero"
-  "twitch"
-  "trends"
-  "favorites"
-  "discover";
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    display: flex;
+    flex-direction: column;
 }

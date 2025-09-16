@@ -6,6 +6,7 @@ import Trends from "./components/home/trends/Trends";
 import { fetchAllPosts } from "@/lib/api-fetcher";
 import styles from "./Page.module.css"
 
+
 async function getPosts() {
   const fullUrl = "https://dummyjson.com/c/a7c4-016a-47aa-8241";
  
