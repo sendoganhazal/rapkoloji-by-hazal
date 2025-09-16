@@ -1,16 +1,12 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Saira_Condensed } from "next/font/google";
 import "./globals.css";
 import Header from "./components/layout/header/Header";
 import Footer from "./components/layout/footer/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const sairaCondensed = Saira_Condensed({
   subsets: ["latin"],
+  weight:"400"
 });
 
 export const metadata = {
@@ -21,7 +17,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className={sairaCondensed.className}>
         <Header />
         {children}
         <Footer />

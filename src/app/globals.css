@@ -18,6 +18,12 @@ body {
   overflow-x: hidden;
 }
 
+body {
+  background-color: var(--background);
+  color: var(--text-default);
+  font-family: "Saira Condensed";
+}
+
 
 * {
   box-sizing: border-box;
@@ -28,4 +34,29 @@ body {
 a {
   display: block;
   text-decoration: none;
+}
+
+ul,ol,li {
+  list-style: none;
+  padding: 0 ;
+  margin: 0;
+}
+
+.btn {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.875rem 1.875rem;
+}
+
+.btn-header {
+  background-color: var(--header-button);
+  color: var(--header-button-text);
+  text-transform: uppercase;
+}
+
+header .btn-default {
+  color: var(--white);
 }
