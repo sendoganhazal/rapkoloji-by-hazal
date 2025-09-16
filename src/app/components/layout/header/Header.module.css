@@ -1,0 +1,42 @@
+.header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 80px;
+    padding: 1.25rem 5rem;
+}
+
+
+.brand { 
+    flex-grow: 0.5;
+}
+.middle { 
+    flex-grow: 2;
+ }
+.right { 
+    flex-grow: 0.5;
+}
+
+.navList {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+
+}
+
+.middle .navList {
+    padding: 0 50px;
+    width: 100%;
+}
+
+
+.navList a {
+    color: var(--header-link);
+    padding: 0 15px;
+    text-transform: uppercase;
+}
