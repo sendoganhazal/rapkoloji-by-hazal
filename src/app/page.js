@@ -21,12 +21,14 @@ export default async function Home() {
     new Date(b.updatedAt) - new Date(a.updatedAt)
   ).slice(0,10);
   const updated_data = all_posts?.filter(post => post.attributes.trends === true);
+  const favorites_data = all_posts?.filter(post => post.attributes.tags.includes( "Ayın Videoları"));
+  console.log(favorites_data.length)
   return (
     <main className={styles.main}>
-      <Hero data={hero_data}/>
+      <Hero hero_data={hero_data}/>
       <Twitch/>
       <Trends data={updated_data}/>
-      <Favorites/>
+      <Favorites fav_slides={favorites_data}/>
     </main>
   );
 }

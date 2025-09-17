@@ -11,10 +11,12 @@ import Image from "next/image";
 import img_url from "@/app/assets/hiphop.png";
 import Link from "next/link";
 
-export default function HeroSlider({ data }) {
+export default function HeroSlider({ hero_data }) {
   return (
-    <div className="hero-swiper">
+    <div className="hero-swi">
       <Swiper
+      key="hero-swiper"
+      className="hero-swiper"
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         slidesPerView={1}
         spaceBetween={50}
@@ -22,9 +24,9 @@ export default function HeroSlider({ data }) {
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
       >
-        {data?.map((item, key) => {
+        {hero_data?.map((item) => {
           return (
-            <SwiperSlide key={key}>
+            <SwiperSlide key={`hero-${item._id}`}>
               <div className="hero-swiper-item">
                 <Image src={img_url} width={500} height={500} alt="Hero" />
                 <div className="hero-swiper-content">

@@ -60,8 +60,8 @@ li {
 header .btn-default {
   color: var(--white);
 }
-.hero-swiper,
-.hero-swiper .swiper {
+.hero-swi,
+.hero-swi .swiper {
   height: 100%;
 }
 
@@ -144,4 +144,23 @@ header .btn-default {
     flex-direction: column;
     background-color: var(--background);
   }
+}
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--yellow);
+  border-radius: 10px;
+  border: 2px solid var(--yellow);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: var(--purple);
 }

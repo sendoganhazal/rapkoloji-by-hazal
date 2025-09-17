@@ -1,0 +1,55 @@
+
+
+
+.favSection {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 90px 0 90px 80px;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+.sectionHeader h2 {
+  width: 245px;
+  font-size: 3.75rem;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+.favItems {
+  flex-basis: 75%;
+  overflow-x: scroll;
+}
+
+.carouselWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.carouselItem {
+  background-image: url("../../../assets/Group\ \(1\).png");
+  background-repeat: no-repeat;
+  padding: 70px 50px;
+  text-align: center;
+  font-size: 1.25rem;
+  border-radius: 10px;
+}
+
+@media (max-width: 1023.98px) {
+  .sectionHeader,
+  .favItems {
+    flex-basis: 100%;
+  }
+  .favSection {
+    padding: 40px 20px;
+  }
+
+  .favItems {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width:1439.98px) {
+  .favItems {
+    flex-basis: 60%;
+  }
+}
