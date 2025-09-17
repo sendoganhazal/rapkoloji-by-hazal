@@ -17,17 +17,15 @@ async function getPosts() {
 
 export default async function Home() {
   const all_posts = await getPosts();
-  const hero_data = all_posts.sort((a, b) => 
-    new Date(b.createdAt) - new Date(a.createdAt)
-  ).slice(0,10);
-  const updated_data = all_posts.sort((a, b) => 
+  const hero_data = all_posts?.sort((a, b) => 
     new Date(b.updatedAt) - new Date(a.updatedAt)
-  );
+  ).slice(0,10);
+  const updated_data = all_posts?.filter(post => post.attributes.trends === true);
   return (
     <main className={styles.main}>
       <Hero data={hero_data}/>
       <Twitch/>
-      <Trends data={updated_data.slice(0,6)}/>
+      <Trends data={updated_data}/>
       <Favorites/>
     </main>
   );

@@ -1,0 +1,148 @@
+.trendSection {
+  padding: 80px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 45px;
+}
+.icon {
+  width: 50px;
+  height: 50px;
+}
+.icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.sectionHeader h2 {
+  font-size: 3.75rem;
+  line-height: 1.25;
+  margin-right: 6px;
+}
+
+.trendContentWrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 45px;
+  margin-top: 45px;
+}
+
+.trendContent {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.counter {
+  font-size: 3.75rem;
+  font-weight: 700;
+  color: #2a2a2a;
+}
+
+.body {
+  width: 80%;
+ 
+}
+.authorInfo {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.authorAvatar {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+}
+.authorAvatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.author {
+  font-size: 1rem;
+  line-height: 1.25;
+  letter-spacing: 1.5%;
+}
+
+.content h4 {
+  font-size: 1.5625rem;
+}
+
+.action {
+  border-top: 1px solid #3b3b3b;
+  padding-top: 22px;
+  margin-top: 20px;
+}
+
+.action a {
+  color: var(--text-default);
+  font-size: 1rem;
+  line-height: 1.25;
+  letter-spacing: 1.5%;
+}
+
+.action a:hover {
+  text-decoration: underline;
+  color: var(--primary);
+}
+
+.action a:focus,
+.action a:active {
+  text-decoration: underline;
+  color: var(--secondary);
+}
+
+.trendAction {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.trendAction a {
+  box-shadow: 8.54px 8.54px 0px 0px #000000;
+  background-image: url("../../../assets/Vector\ 4.png");
+  background-repeat: no-repeat;
+  color: #000000;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 700;
+  width: 200px;
+  text-align: center;
+}
+
+@media (max-width: 767.98px) {
+  .trendSection {
+    padding: 40px 20px;
+  }
+  .trendContentWrapper {
+    grid-template-columns: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 45px;
+    margin-top: 45px;
+  }
+  .content h4 {
+    font-size: 1.25rem;
+  }
+  .author,
+  .action a {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 1024.98px) {
+  .trendSection {
+    padding: 40px;
+  }
+  .trendContentWrapper {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
