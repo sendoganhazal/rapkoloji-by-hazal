@@ -72,6 +72,7 @@ header .btn-default {
 
 .hero-swiper-item {
   position: relative;
+  height: 100%;
 }
 
 .hero-swiper-item img {
@@ -86,6 +87,8 @@ header .btn-default {
   top: 175px;
   right: 150px;
   width: 40%;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero-swiper-content h4 {
@@ -128,6 +131,18 @@ header .btn-default {
     flex-direction: column;
     background-color: var(--background);
   }
+  .hero-swiper-content {
+    width: 70%;
+    margin: 0 auto;
+    left: 20px;
+    right: 20px;
+
+    align-items: center;
+    text-align: center;
+  }
+  .hero-swiper-content h4 {
+    font-size: 1.875rem;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1023.98px) {
@@ -144,6 +159,16 @@ header .btn-default {
     flex-direction: column;
     background-color: var(--background);
   }
+  .hero-swiper-content {
+    width: 70%;
+    margin: 0 auto;
+    left: 80px;
+    right: 80px;
+
+    align-items: center;
+    text-align: center;
+  }
+
 }
 .custom-scrollbar::-webkit-scrollbar {
   width: 10px;
