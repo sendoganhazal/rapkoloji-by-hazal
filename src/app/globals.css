@@ -61,7 +61,7 @@ header .btn-default {
   color: var(--white);
 }
 .hero-swi,
-.hero-swi .swiper {
+.swiper {
   height: 100%;
 }
 
@@ -116,7 +116,49 @@ header .btn-default {
 .btn-toggle {
   display: none;
 }
+.blog-swiper .item-content {
+  width: 75%;
+  padding-left: 45px;
+}
+.blog-swiper h4 {
+  font-size: 1.5625rem;
+  color: var(--background);
+}
+.item-title h3 {
+  font-size: 2.5rem;
+}
+.blog-swiper-item .item-img {
+  width: auto;
+  height: 430px;
+  position: relative;
+}
+.blog-swiper-item .item-title {
+  position: absolute;
+  left: 50px;
+  bottom: 40px;
+  z-index: 2;
+}
+.blog-swiper-item .item-img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
 
+.blog-swiper .swiper-pagination-bullets.swiper-pagination-horizontal {
+  width: 25%;
+  left: auto;
+  right: 0;
+  height: 20px;
+  top: 460px;
+}
+.blog-swiper .swiper-pagination-bullet {
+  background: #8e870d;
+  opacity: 1;
+}
+.blog-swiper .swiper-pagination-bullet-active {
+  background: var(--background);
+}
 @media (max-width: 767.98px) {
   .btn-toggle {
     display: block;
@@ -143,6 +185,18 @@ header .btn-default {
   .hero-swiper-content h4 {
     font-size: 1.875rem;
   }
+  .blog-swiper .item-content {
+    padding-left: 0;
+  }
+  .blog-swiper h4 {
+    font-size: 1.25rem;
+  }
+  .blog-swiper .item-title {
+    left: 20px;
+  }
+  .item-title h3 {
+    font-size: 1.5625rem;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1023.98px) {
@@ -168,7 +222,49 @@ header .btn-default {
     align-items: center;
     text-align: center;
   }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .hero-swiper-content {
+    width: 70%;
+    margin: 0 auto;
+    left: 20px;
+    right: 20px;
 
+    align-items: center;
+    text-align: center;
+  }
+  .blog-swiper .item-content {
+    padding-left: 0;
+  }
+  .blog-swiper .item-title {
+    left: 20px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1023.98px) {
+ .hero-swiper-content {
+    width: 70%;
+    margin: 0 auto;
+    left: 20px;
+    right: 20px;
+
+    align-items: center;
+    text-align: center;
+  }
+  .hero-swiper-content h4 {
+    font-size: 1.875rem;
+  }
+  .blog-swiper .item-content {
+    padding-left: 0;
+  }
+  .blog-swiper h4 {
+    font-size: 1.25rem;
+  }
+  .blog-swiper .item-title {
+    left: 20px;
+  }
+  .item-title h3 {
+    font-size: 1.5625rem;
+  }
 }
 .custom-scrollbar::-webkit-scrollbar {
   width: 10px;

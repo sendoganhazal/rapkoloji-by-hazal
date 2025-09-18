@@ -8,9 +8,7 @@ import styles from "./Page.module.css"
 
 
 async function getPosts() {
-  const fullUrl = "https://dummyjson.com/c/a7c4-016a-47aa-8241";
- 
-  const post = await fetchAllPosts(fullUrl);
+  const post = await fetchAllPosts();
   return post;
 }
 

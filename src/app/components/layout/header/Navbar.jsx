@@ -44,11 +44,20 @@ export default function Navbar({ data }) {
         </button>
         <nav className={styles.middle}>
           <ul className={styles.navList}>
+            <li>
+              <Link href={`#`}>Haberler</Link>
+            </li>
+            <li>
+              <Link href={`#`}>Etkinlikler</Link>
+            </li>
             {data.categories.map((c, key) => (
               <li key={key}>
-                <Link href={"/"}>{c}</Link>
+                <Link href={`/blog/${c.toLowerCase()}`}>{c}</Link>
               </li>
             ))}
+            <li>
+              <Link href={`#`}>İletişim</Link>
+            </li>
           </ul>
         </nav>
         <nav className={styles.right}>
