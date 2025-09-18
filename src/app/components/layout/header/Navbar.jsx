@@ -45,7 +45,7 @@ export default function Navbar({ data }) {
         <nav className={styles.middle}>
           <ul className={styles.navList}>
             <li>
-              <Link href={`#`}>Haberler</Link>
+              <Link href={"/blog/haberler"}>Haberler</Link>
             </li>
             <li>
               <Link href={`#`}>Etkinlikler</Link>

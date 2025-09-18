@@ -16,13 +16,19 @@ export default function BlogMain() {
   const [posts, setPosts] = useState(null);
   async function setData() {
     const data = await getPosts();
-    const slug = id.slice(0, 1).toUpperCase() + id.slice(1, id.length);
+    if (id === "haberler") {
+      setPosts(data);
+    } else if (id === "etkinlikler") {
+      setPosts(data);
+    } else {
+      const slug = id.slice(0, 1).toUpperCase() + id.slice(1, id.length);
 
-    const filtered_data = data.filter((item) =>
-      item.attributes.category.includes(slug.replace("u", "ü"))
-    );
-    console.log(filtered_data);
-    setPosts(filtered_data);
+      const filtered_data = data.filter((item) =>
+        item.attributes.category.includes(slug.replace("u", "ü"))
+      );
+      console.log(filtered_data);
+      setPosts(filtered_data);
+    }
   }
   useEffect(() => {
     setData();
