@@ -52,7 +52,7 @@ export default function Navbar({ data }) {
             </li>
             {data.categories.map((c, key) => (
               <li key={key}>
-                <Link href={`/blog/${c.toLowerCase()}`}>{c}</Link>
+                <Link href={`/blog/${c.slug}`}>{c.label}</Link>
               </li>
             ))}
             <li>

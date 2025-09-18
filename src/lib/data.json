@@ -1,3 +1,14 @@
 {
-    "categories":["Videolar","Müzikler"]
+    "categories":[
+        {
+            "id":0,
+            "label":"Videolar",
+            "slug":"videolar"
+        },
+        {
+            "id":1,
+            "label":"Müzikler",
+            "slug":"muzik"
+        }
+    ]
 }

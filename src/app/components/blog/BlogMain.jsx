@@ -17,16 +17,17 @@ export default function BlogMain() {
   async function setData() {
     const data = await getPosts();
     const slug = id.slice(0, 1).toUpperCase() + id.slice(1, id.length);
-    console.log(slug);
+
     const filtered_data = data.filter((item) =>
-      item.attributes.category.includes(slug)
+      item.attributes.category.includes(slug.replace("u", "ü"))
     );
+    console.log(filtered_data);
     setPosts(filtered_data);
   }
   useEffect(() => {
     setData();
   }, []);
-  console.log(posts?.length);
+
   return (
     <main className={styles.blogMain}>
       <div className={styles.filigran}></div>
