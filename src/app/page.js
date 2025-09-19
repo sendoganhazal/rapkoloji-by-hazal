@@ -25,7 +25,7 @@ export default async function Home() {
     <main className={styles.main}>
       <Hero hero_data={hero_data}/>
       <Twitch/>
-      <Trends data={updated_data}/>
+      <Trends data={updated_data} params={""}/>
       <Favorites fav_slides={favorites_data}/>
     </main>
   );

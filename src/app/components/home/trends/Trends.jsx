@@ -5,7 +5,7 @@ import styles from "./Trends.module.css";
 import Link from "next/link";
 import dummy from "../../../assets/author_dummy.png";
 
-export default function Trends({ data }) {
+export default function Trends({ data,params }) {
   const sorted_data = data?.sort(
     (a, b) => new Date(b.updatedAt) - new Date(a.updatedAt)
   );
@@ -18,7 +18,7 @@ export default function Trends({ data }) {
           <Image width={65} height={65} src={icon} alt="Trend" />
         </div>
       </div>
-      <div className={styles.trendContentWrapper}>
+      <div aria-label={params && "has-slug"} className={styles.trendContentWrapper}>
         {sorted_data.slice(0,6)?.map((item, key) => (
           <div className={styles.trendContent} key={key}>
             <div className={styles.counter}>{key + 1}</div>

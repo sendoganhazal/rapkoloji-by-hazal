@@ -1,9 +1,6 @@
 import { Saira_Condensed } from "next/font/google";
 import "./globals.css";
 import Header from "./components/layout/header/Header";
-import Footer from "./components/layout/footer/Footer";
-
-
 
 const sairaCondensed = Saira_Condensed({
   subsets: ["latin"],
@@ -21,7 +18,6 @@ export default function RootLayout({ children }) {
       <body className={sairaCondensed.className}>
         <Header />
         {children}
-        <Footer />
       </body>
     </html>
   );

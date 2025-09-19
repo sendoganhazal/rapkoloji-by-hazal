@@ -33,7 +33,14 @@ a {
   display: block;
   text-decoration: none;
 }
-
+h3 {
+  font-size: 2.5rem;
+  line-height: 1.15;
+}
+h4 {
+  font-size: 1.5625rem;
+  line-height: 1.15;
+}
 ul,
 ol,
 li {
@@ -49,6 +56,7 @@ li {
   font-size: 0.875rem;
   font-weight: 600;
   padding: 0.875rem 1.875rem;
+  font-family: "Saira Condensed";
 }
 
 .btn-header {
@@ -57,12 +65,42 @@ li {
   text-transform: uppercase;
 }
 
-header .btn-default {
+.btn-default {
   color: var(--white);
+}
+
+.btn-submit {
+  color: var(--yellow);
+  display: flex;
+  align-items: center;
+}
+.btn-submit span {
+  display: block;
 }
 .hero-swi,
 .swiper {
   height: 100%;
+}
+.form-row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 1px solid #3b3b3b;
+}
+
+.form-control {
+  background-color: transparent;
+  padding: 12px 20px;
+  color: var(--text-default);
+  font-size: 0.875rem;
+  font-weight: 700;
+  border: none;
+  display: block;
+  outline: none;
+}
+.form-control:focus {
+  border: none;
+  outline: none;
 }
 
 .swiper-button-prev svg,
@@ -241,7 +279,7 @@ header .btn-default {
   }
 }
 @media (min-width: 992px) and (max-width: 1023.98px) {
- .hero-swiper-content {
+  .hero-swiper-content {
     width: 70%;
     margin: 0 auto;
     left: 20px;

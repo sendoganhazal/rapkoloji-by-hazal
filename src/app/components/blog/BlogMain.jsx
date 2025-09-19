@@ -47,7 +47,7 @@ export default function BlogMain() {
           </section>
           {posts?.length > 5 && (
             <section className={styles.listCol}>
-              <BlogList list_items={posts?.slice(5, posts?.length)} />
+              <BlogList list_items={posts?.slice(5, posts?.length)} slug={id} />
             </section>
           )}
         </div>
