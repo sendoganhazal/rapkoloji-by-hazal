@@ -1,0 +1,112 @@
+.listView {
+  display: flex;
+  flex-direction: column;
+}
+
+.listContent {
+  display: flex;
+  flex-flow: row wrap;
+  /* justify-content: space-between; */
+  padding-bottom: 80px;
+}
+.listContent .body {
+  flex-basis: 50%;
+}
+.listContent .img {
+  width: 300px;
+  flex-basis: 300px;
+  height: 240px;
+  margin-right: 10px;
+}
+.listContent .img img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.authorInfo {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.authorAvatar {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+}
+.authorAvatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.author {
+  font-size: 1rem;
+  line-height: 1.25;
+  letter-spacing: 1.5%;
+}
+
+.content h4 {
+  font-size: 1.5625rem;
+}
+
+.action {
+  border-top: 1px solid #3b3b3b;
+  padding-top: 22px;
+  margin-top: 20px;
+}
+
+.action a {
+  color: var(--text-default);
+  font-size: 1rem;
+  line-height: 1.25;
+  letter-spacing: 1.5%;
+}
+
+.action a:hover {
+  text-decoration: underline;
+  color: var(--primary);
+}
+
+.action a:focus,
+.action a:active {
+  text-decoration: underline;
+  color: var(--secondary);
+}
+
+@media (max-width: 767.98px) {
+  .content h4 {
+    font-size: 1.25rem;
+  }
+  .author,
+  .action a {
+    font-size: 0.875rem;
+  }
+  .listContent .body {
+    flex-basis: 100%;
+    margin-top: 30px;
+  }
+  .listContent .img {
+    width: 100%;
+    flex-basis: 100%;
+    height: 240px;
+    margin-right: 0;
+  }
+}
+
+@media (min-width:768px) and (max-width: 1023.98px){
+   .listContent .body {
+    flex-basis: 100%;
+    margin-top: 30px;
+  }
+  .listContent .img {
+    width: 100%;
+    flex-basis: 100%;
+    height: 240px;
+    margin-right: 0;
+  }
+}

@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import { fetchAllPosts } from "@/lib/api-fetcher";
 import BlogCarousel from "./BlogCarousel";
 import BlogList from "./BlogList";
+import Footer from "../layout/footer/Footer";
 
 async function getPosts() {
   const post = await fetchAllPosts();
@@ -35,23 +36,29 @@ export default function BlogMain() {
   }, []);
 
   return (
-    <main className={styles.blogMain}>
-      <div className={styles.filigran}></div>
-      <div className={styles.wrapper}>
-        <div className={styles.blogMainContent}>
-          <section className={styles.carouselCol}>
-            <BlogCarousel
-              carousel_items={posts?.length > 5 ? posts?.slice(0, 5) : posts}
-              slug={id}
-            />
-          </section>
-          {posts?.length > 5 && (
-            <section className={styles.listCol}>
-              <BlogList list_items={posts?.slice(5, posts?.length)} slug={id} />
+    <>
+      <main className={styles.blogMain}>
+        <div className={styles.filigran}></div>
+        <div className={styles.wrapper}>
+          <div className={styles.blogMainContent}>
+            <section className={styles.carouselCol}>
+              <BlogCarousel
+                carousel_items={posts?.length > 5 ? posts?.slice(0, 5) : posts}
+                slug={id}
+              />
             </section>
-          )}
+            {posts?.length > 5 && (
+              <section className={styles.listCol}>
+                <BlogList
+                  list_items={posts?.slice(5, posts?.length)}
+                  slug={id}
+                />
+              </section>
+            )}
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+      <Footer footer={posts} />
+    </>
   );
 }

@@ -1,12 +1,19 @@
+import Link from "next/link";
 import React from "react";
+import styles from "./Subscription.module.css";
+import Image from "next/image";
 
-export default function Subscription() {
+export default function Subscription({ socialLinks, navLinks }) {
   return (
-    <div>
+    <div className={styles.subscriptionSection}>
       <h3>GELİŞMELERDEN İLK SEN HABERDAR OL!</h3>
       <form>
         <div className="form-row">
-          <input type="email" className="form-control" placeholder="EMAIL"></input>
+          <input
+            type="email"
+            className="form-control"
+            placeholder="EMAIL"
+          ></input>
           <button type="submit" className="btn btn-default btn-submit">
             <span>Gönder</span>
             <span>
@@ -36,6 +43,40 @@ export default function Subscription() {
           </button>
         </div>
       </form>
+      <nav className={styles.socialLinks}>
+        <ul>
+          {socialLinks.map((sl, key) => (
+            <li key={key}>
+              <Link href={sl.url}>
+                <Image
+                  src={sl.img}
+                  width={30}
+                  height={30}
+                  alt={"social link"}
+                />
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <nav className={styles.navLinks}>
+        <ul>
+          <li>
+            <Link href={"#"}>Haberler</Link>
+          </li>
+          <li>
+            <Link href={"#"}>Etkinlikler</Link>
+          </li>
+          {navLinks.map((nl, key) => (
+            <li key={key}>
+              <Link href={"#"}>{nl.label}</Link>
+            </li>
+          ))}
+          <li>
+            <Link href={"#"}>İletişim</Link>
+          </li>
+        </ul>
+      </nav>
     </div>
   );
 }

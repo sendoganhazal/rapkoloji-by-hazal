@@ -1,0 +1,70 @@
+.subscriptionSection {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+}
+
+.socialLinks ul {
+  padding: 25px 0;
+}
+
+.socialLinks ul,
+.navLinks ul {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.socialLinks a,
+.navLinks a {
+  display: block;
+}
+
+.socialLinks a {
+  padding: 25px 15px;
+}
+.socialLinks li:first-child a {
+  padding-left: 0;
+}
+.socialLinks li:last-child a {
+  padding-right: 0;
+}
+
+.socialLinks img {
+  display: block;
+  object-fit: scale-down;
+}
+.navLinks ul {
+    width: 75%;
+}
+
+.navLinks li {
+    flex-basis: 33%;
+}
+
+.navLinks a {
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  color: var(--text-default);
+  width: 100%;
+
+}
+
+.navLinks a:hover {
+  color: var(--yellow);
+  cursor: pointer;
+  text-decoration: underline;
+}
+.navLinks a:focus {
+  color: var(--purple);
+  cursor: pointer;
+  text-decoration: underline;
+}
+@media (max-width: 1023.98px) {
+    .navLinks ul{
+        width: 100%;
+    }
+    .navLinks li {
+        flex-basis: auto;
+        padding-right: 15px;
+    }
+}

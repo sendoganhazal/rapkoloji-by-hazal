@@ -5,6 +5,7 @@ import Favorites from "./components/home/favorites/Favorites";
 import Trends from "./components/home/trends/Trends";
 import { fetchAllPosts } from "@/lib/api-fetcher";
 import styles from "./Page.module.css"
+import Footer from "./components/layout/footer/Footer";
 
 
 async function getPosts() {
@@ -27,6 +28,7 @@ export default async function Home() {
       <Twitch/>
       <Trends data={updated_data} params={""}/>
       <Favorites fav_slides={favorites_data}/>
+      <Footer footer={all_posts}/>
     </main>
   );
 }
