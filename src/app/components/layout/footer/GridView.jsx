@@ -35,7 +35,7 @@ export default function GridView({grid_data,isInner}) {
               <h4>{item.attributes.title}</h4>
             </div>
             <div className={styles.action}>
-              <Link href={item.attributes.slug}>Daha Fazla Oku</Link>
+              <Link href={`/blog/${item.attributes.category[0].toLowerCase()}/${item.attributes.slug}`}>Daha Fazla Oku</Link>
             </div>
           </div>
         </div>

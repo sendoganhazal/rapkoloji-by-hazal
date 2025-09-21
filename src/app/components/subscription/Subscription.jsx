@@ -45,7 +45,7 @@ export default function Subscription({ socialLinks, navLinks }) {
       </form>
       <nav className={styles.socialLinks}>
         <ul>
-          {socialLinks.map((sl, key) => (
+          {socialLinks?.map((sl, key) => (
             <li key={key}>
               <Link href={sl.url}>
                 <Image
@@ -67,7 +67,7 @@ export default function Subscription({ socialLinks, navLinks }) {
           <li>
             <Link href={"#"}>Etkinlikler</Link>
           </li>
-          {navLinks.map((nl, key) => (
+          {navLinks?.map((nl, key) => (
             <li key={key}>
               <Link href={"#"}>{nl.label}</Link>
             </li>

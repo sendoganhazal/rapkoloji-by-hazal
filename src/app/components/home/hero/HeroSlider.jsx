@@ -32,7 +32,7 @@ export default function HeroSlider({ hero_data }) {
                 <div className="hero-swiper-content">
                   <h4>{item.attributes.title}</h4>
                   <p>{item.attributes.desc}</p>
-                  <Link href={`/post/${item.attributes.slug}`} className="btn hero-primary-btn">
+                  <Link href={`/blog/${item.attributes.category[0].toLowerCase()}/${item.attributes.slug}`} className="btn hero-primary-btn">
                     Devamını Oku
                   </Link>
                 </div>
