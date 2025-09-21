@@ -1,10 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Herkese Merhaba,
 
-## Getting Started
+Ben Hazal Şendoğan.
 
-First, run the development server:
+Codezone Vaka Çalışması için "Rapkoloji" adlı blogu Next.js ile geliştirdim.
 
-```bash
+
+## Başlarken
+
+Production Linki:[`Rapkoloji`](https://rapkoloji-by-hazal.netlify.app/)  
+
+Localde çalıştırmak için öncelikle
+``` git clone ``` ile localinize almanız gerekmektedir.
+
+Daha sonra 
+
+```
+cd rapkoloji-by-hazal
+npm install
+```
+komutlarını çalıştırmanız gerekmektedir.
+
+Uygulamayı localde ayağa kaldırmak için
+
+```
+cd rapkoloji-by-hazal
+bash
 npm run dev
 # or
 yarn dev
@@ -14,23 +34,20 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ardından bu linki [http://localhost:3000](http://localhost:3000) tarayıcınızda açınız.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Bu projede Google fontunu kullanabilmek için [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) özelliği kullanılmıştır.
+Carousel için Swiper.js kullanılmıştır.
 
-## Learn More
+CSS için hiçbir ui library (swiper dışında) kullanılmamış olup, hepsi benim tarafımdan CSS Grid ya da Flexbox gibi modern teknolojiler kullanılarak yapılmıştır.
 
-To learn more about Next.js, take a look at the following resources:
+## Klasör Yapısı
+assets klasöründe imagelar ve logolar yer almaktadır.
+components klasöründe componentler ortak özelliklerine göre bir klasöre alınmıştır.
+Her componentin kendi module.css'i vardır.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Daha Fazlası için sizinle bir görüşme yapmak isterim.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
