@@ -234,7 +234,7 @@ export default function Footer({ footer }) {
           {/* {data.map((i,key) => <p key={key}>{i.title}</p>)} */}
         </section>
         <section className={styles.bottom}>
-          <Subscription socialLinks={social_Links} />
+          <Subscription socialLinks={social_Links} navLinks={nav_links} />
         </section>
       </footer>
     );
@@ -366,7 +366,7 @@ export default function Footer({ footer }) {
               </ul>
             </div>
           </div>
-                <div className={styles.tabs}>
+          <div className={styles.tabs}>
             <h2>Ne Görmek İstersin?</h2>
             <ul className={styles.chipList}>
               {tags.map((tag, key) => (

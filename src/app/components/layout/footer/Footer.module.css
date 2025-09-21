@@ -98,9 +98,20 @@
   fill: var(--yellow);
 }
 
+.innerFooter nav ul{
+  width: 100%;
+}
+.innerFooter nav:last-of-type li {
+  flex-basis: 15%;
+  padding-right: 15px;
+}
+
 @media (max-width: 1023.98px) {
   .footer {
     grid-template-columns: repeat(2, 1fr);
+    padding: 40px;
+  }
+  .innerFooter {
     padding: 40px;
   }
   .content {
